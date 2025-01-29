@@ -1,0 +1,50 @@
+* {
+    /* We will pad things to the exact dimentions we need them */
+    margin: 0;
+    /* Make flexbox include padding in calculations */
+    box-sizing: border-box;
+}
+
+/* Add the class for rendering the toki pona font */
+@font-face {
+    font-family: "linjapona";
+    src:
+        url(../fonts/linja-pona-4.2.otf) format('opentype'),
+        url(../fonts/linja-pona-4.2.ttf) format('truetype');
+}
+
+.tp {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "linjapona";
+}
+
+body {
+    background-color: skyblue;
+    font-size: 30px;
+    width: 100%;
+}
+
+/*
+    In the flexbox row, the text takes up 40% and the image takes up 60%.
+    The border-radius property controls rounding of an element's corners.
+    "flex" is shorthand for "...-grow ...-shrink ...-basis"
+    "border" is shorthand for "...-width ...-style ...-color"
+    "padding" is shorthand for "...-top ...-right ...-bottom ...-left"
+*/
+
+.row_text {
+    flex: 0 0 40%;
+    border: 2px solid black;
+    padding: 16px 16px 16px 16px;
+    border-radius: 16px;
+}
+
+.row_img {
+    flex: 0 0 60%;
+}
+
+.row {
+    /* Enables flexbox sizing for child elements */
+    display: flex;
+}
