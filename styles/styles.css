@@ -20,9 +20,11 @@
 }
 
 body {
-    background-color: skyblue;
+    background-color: lightcyan;
     font-size: 30px;
-    width: 100%;
+    /* Center the page, make it take up 85% of the viewport */
+    margin: auto;
+    width: 85%;
 }
 
 /*
@@ -33,6 +35,11 @@ body {
     "padding" is shorthand for "...-top ...-right ...-bottom ...-left"
 */
 
+.row {
+    /* Enables flexbox sizing for child elements */
+    display: flex;
+}
+
 .row_text {
     flex: 0 0 40%;
     border: 2px solid black;
@@ -42,9 +49,4 @@ body {
 
 .row_img {
     flex: 0 0 60%;
-}
-
-.row {
-    /* Enables flexbox sizing for child elements */
-    display: flex;
 }
