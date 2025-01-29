@@ -38,6 +38,7 @@ body {
 .row {
     /* Enables flexbox sizing for child elements */
     display: flex;
+    max-width: 100%;
 }
 
 .row_text {
@@ -49,4 +50,5 @@ body {
 
 .row_img {
     flex: 0 0 60%;
+    width: 100%;
 }
