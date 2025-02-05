@@ -18,6 +18,10 @@
     font-family: "linjapona";
 }
 
+li {
+    display: inline;
+}
+
 body {
     background-color: lightcyan;
     font-size: 30px;
@@ -31,6 +35,7 @@ body {
     The border-radius property controls rounding of an element's corners.
     "flex" is shorthand for "...-grow ...-shrink ...-basis"
     "border" is shorthand for "...-width ...-style ...-color"
+    "margin" is shorthand for "...-top ...-right ...-bottom ...-left"
     "padding" is shorthand for "...-top ...-right ...-bottom ...-left"
 */
 
@@ -41,15 +46,21 @@ body {
 }
 
 .row_text {
-    flex: 0 0 40%;
+    flex: 0 0 60%;
     border: 2px solid black;
     padding: 16px 16px 16px 16px;
     border-radius: 16px;
 }
 
 .row_img {
-    flex: 0 0 60%;
+    flex: 0 0 40%;
     /* Scale the image if it's container is too small */
     width: 100%;
     height: 100%;
+}
+
+nav a {
+    color: blue;
+    padding: 0 1em 0 1em;
+    text-decoration: none;
 }
