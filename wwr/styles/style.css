@@ -1,0 +1,67 @@
+* {
+    /* We will pad things to the exact dimentions we need them */
+    margin: 0;
+    /* Include padding/borders in calculations */
+    box-sizing: border-box;
+}
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {
+    text-align: center; 
+}
+
+#background {
+    height: 725px;
+}
+                
+.icon {
+    width: 64px;
+}
+
+#hero-img {
+    width: 100%;
+}
+
+:root {
+    --main-1: #ebebeb;
+    --main-2: #404040;
+    --alt-1: #ccdae8;
+    --alt-2: #440da3;
+}
+
+body {
+    background-color: var(--main-1);
+    color: var(--main-2);
+}
+
+.home-title, h4, .msg h2, .msg p {
+    background-color: var(--main-2);
+    color: var(--main-1);
+}
+
+header, #background, footer, nav a:hover, footer a:hover, .msg, .join:hover, .book:hover {
+    background-color: var(--alt-1);
+    color: var(--alt-2);
+}
+
+.book, nav a, footer a, .join {
+    background-color: var(--alt-2);
+    color: var(--alt-1);
+}
+
+nav a, .book, .join, footer a {
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
