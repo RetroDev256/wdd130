@@ -21,6 +21,17 @@
   --nav-hover-background-color: var(--accent1-color);
 }
 
+@font-face {
+  font-family: "linjapona";
+  src:
+      url("../fonts/linja-pona-4.9.otf") format('opentype'),
+}
+
+.tp {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "linjapona";
+}
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
@@ -30,7 +41,7 @@ body {
   padding: 4em;
   font-size: 18px;
   text-align: center;
-}colo
+}
 img {
   display: block;
   margin: 0 auto;
