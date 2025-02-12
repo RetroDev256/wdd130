@@ -1,67 +1,123 @@
-* {
-    /* We will pad things to the exact dimentions we need them */
-    margin: 0;
-    /* Include padding/borders in calculations */
-    box-sizing: border-box;
-}
-
-#content {
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {
-    text-align: center; 
-}
-
-#background {
-    height: 725px;
-}
-                
-.icon, .logo {
-    width: 80px;
-}
-
-#hero-img {
-    width: 100%;
-}
-
 :root {
+    /* Colors */
     --main-1: #ebebeb;
     --main-2: #404040;
     --alt-1: #ccdae8;
     --alt-2: #440da3;
 }
 
+/* Size of certain elements */
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+#background {
+    height: 725px;
+}
+.icon, .logo {
+    width: 80px;
+}
+#hero-img {
+    width: 100%;
+}
+footer p {
+    font-size: 1.2em;
+}
+
+img {
+    max-width: 1000px;
+}
+
+/* Font stuff */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Times New Roman', serif;
+}
+p {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.home-title {
+    font-size: 2em;
+}
+.msg {
+    line-height: 1.5em;
+}
+
 body {
     background-color: var(--main-1);
     color: var(--main-2);
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
 }
 
+/* Manage colors for everything */
 .home-title, h4, .msg h2, .msg p {
     background-color: var(--main-2);
     color: var(--main-1);
 }
-
 header, #background, footer, nav a:hover, footer a:hover, .msg, .join:hover, .book:hover {
     background-color: var(--alt-1);
     color: var(--alt-2);
 }
-
 .book, nav a, footer a, .join {
     background-color: var(--alt-2);
     color: var(--alt-1);
 }
 
+/* Padding & Margins */
+#logo_link {
+    padding-top: 5px;
+}
+nav a, .msg {
+    padding: 35px;
+}
+.book, .join {
+    padding: 15px 30px;
+}
+.icon {
+    padding-top: 10px;
+}
+.msg p {
+    padding-bottom: 15px;
+}
+footer {
+    padding: 25px 50px;
+}
+footer .social img {
+    padding-top: 15px;
+}
+.home-title {
+    margin-top: 10px;
+}
+.book, .join {
+    margin-top: 50px;
+}
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+footer {
+    margin-top: 200px;
+}
+
+/* Borders and stuff */
+.book, .join {
+    border-radius: 5px;
+}
+.card-img {
+    border: 10px solid var(--main-2);
+}
+main section img {
+    box-sizing: border-box;
+}
+
+/* Decoration, Alignment */
 nav a, .book, .join, footer a {
     text-align: center;
     text-decoration: none;
 }
-
-footer p {
-    font-size: 1.2em;
-}
-
 footer p a:hover {
     text-decoration: underline;
+}
+nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {
+    text-align: center; 
 }
