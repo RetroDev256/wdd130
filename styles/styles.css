@@ -1,37 +1,28 @@
 * {
     /* We will pad things to the exact dimentions we need them */
     margin: 0;
-    /* Make flexbox include padding in calculations */
-    box-sizing: border-box;
 }
 
 /* Add the class for rendering the toki pona font */
 @font-face {
     font-family: "linjapona";
-    src:
-        url("../fonts/linja-pona-4.9.otf") format('opentype'),
+    src: url("../fonts/linja-pona-4.9.otf") format('opentype'),
 }
 
 .tp {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bold;
     font-family: "linjapona";
 }
 
-li {
-    display: inline;
-}
-
 body {
     background-color: lightcyan;
-    font-size: 30px;
-    /* Center the page, make it take up 85% of the viewport */
-    margin: auto;
-    width: 85%;
+    font-size: 24px;
+    margin: 0 auto;
+    width: 75%;
 }
 
 /*
-    In the flexbox row, the text takes up 40% and the image takes up 60%.
     The border-radius property controls rounding of an element's corners.
     "flex" is shorthand for "...-grow ...-shrink ...-basis"
     "border" is shorthand for "...-width ...-style ...-color"
@@ -39,28 +30,49 @@ body {
     "padding" is shorthand for "...-top ...-right ...-bottom ...-left"
 */
 
-.row {
-    /* Enables flexbox sizing for child elements */
-    display: flex;
-    max-width: 100%;
+/* Grid layout of webpage */
+.grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.row_text {
-    flex: 0 0 60%;
-    border: 2px solid black;
-    padding: 16px 16px 16px 16px;
-    border-radius: 16px;
+.eng_text {
+    grid-column: 1 / 3;
+    grid-row: 1;
 }
 
-.row_img {
-    flex: 0 0 40%;
-    /* Scale the image if it's container is too small */
-    width: 100%;
-    height: 100%;
+.steve_one {
+    grid-column: 3;
+    grid-row: 1;
 }
 
+.steve_two {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.tp_text {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+/* Borders of elements */
+.eng_text,
+.tp_text {
+    border: 4px solid black;
+    padding: 16px;
+}
+
+/* Center steves */
+.steve_one,
+.steve_two {
+    margin: 0 auto;
+}
+
+/* Make links look better */
 nav a {
     color: blue;
-    padding: 0 1em 0 1em;
     text-decoration: none;
 }
