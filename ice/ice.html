@@ -38,7 +38,6 @@
 
             border-radius: 32px;
             border: 4px dashed var(--fg);
-            background: var(--bg);
             color: var(--fg);
             text-decoration: none;
 
@@ -94,14 +93,12 @@
         }
 
         a span:hover {
-            font-size: 96px;
-            background: transparent;
+            mix-blend-mode: exclusion;
+            font-size: 64px;
         }
 
         a:hover {
-            border: 4px dashed var(--bg);
             background: var(--fg);
-            color: var(--bg);
         }
     </style>
 </head>
