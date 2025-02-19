@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICE projects</title>
+    <style>
+        * {
+            transition-duration: 250ms;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #13181c;
+            --fg: whitesmoke;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: var(--bg);
+            overflow: hidden;
+            padding: 64px;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            grid-template-rows: 3fr 2fr;
+            gap: 16px;
+        }
+
+        a {
+            position: relative;
+            overflow: hidden;
+
+            border-radius: 32px;
+            border: 4px dashed var(--fg);
+            background: var(--bg);
+            color: var(--fg);
+            text-decoration: none;
+
+        }
+
+        a span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: monospace;
+            font-size: 48px;
+            font-weight: bold;
+
+            background: var(--bg);
+
+            z-index: 1;
+        }
+
+        a iframe {
+            pointer-events: none;
+            filter: blur(16px);
+
+            z-index: 0;
+        }
+
+        a * {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #a1,
+        #a3 {
+            grid-column: 1;
+        }
+
+        #a2,
+        #a4 {
+            grid-column: 2;
+        }
+
+        #a1,
+        #a2 {
+            grid-row: 1;
+        }
+
+        #a3,
+        #a4 {
+            grid-row: 2;
+        }
+
+        a span:hover {
+            font-size: 96px;
+            background: transparent;
+        }
+
+        a:hover {
+            border: 4px dashed var(--bg);
+            background: var(--fg);
+            color: var(--bg);
+        }
+    </style>
+</head>
+
+<body>
+    <a id="a1" href="spotlight.html">
+        <span> Spotlight </span>
+        <iframe id="i1" src="spotlight.html"></iframe>
+    </a>
+    <a id="a2" href="nelson.html">
+        <span> Nelson </span>
+        <iframe id="i2" src="nelson.html"></iframe>
+    </a>
+    <a id="a3" href="valentines.html">
+        <span> Valentines </span>
+        <iframe id="i3" src="valentines.html"></iframe>
+    </a>
+    <a id="a4" href="flags.html">
+        <span> Flags </span>
+        <iframe id="i4" src="flags.html"></iframe>
+    </a>
+</body>
+
+</html>
