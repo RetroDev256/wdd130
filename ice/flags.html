@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Flags </title>
     <style>
+        * {
+            transition-duration: 250ms;
+        }
+
         body {
             background: #101218;
             margin: 3% auto;
             color: white;
             font-size: larger;
             font-family: 'Courier New', Courier, monospace;
-            width: 65%;
+            width: 65vw;
         }
 
         hr {
@@ -20,17 +24,17 @@
             margin: 2em 0;
         }
 
-        h2 {
-            float: left;
-        }
-
-        :is(#chile, #denmark, #finland, #benin, #italy, #car, #usa) {
+        body>div {
             display: grid;
             margin: 0 0 0 auto;
             width: 50vmin;
             padding: 16px;
             box-sizing: border-box;
             border: 4px dashed white;
+        }
+
+        body>div:hover {
+            width: 65vmin;
         }
 
         .star {
