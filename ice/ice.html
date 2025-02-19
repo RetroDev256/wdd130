@@ -11,8 +11,7 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
+        :is(html, body) {
             height: 100%;
             margin: 0;
         }
@@ -50,26 +49,22 @@
             filter: blur(48px) brightness(0%);
         }
 
-        #a1,
-        #i1 {
+        :is(#a1, #i1) {
             grid-column: 1;
             grid-row: 1;
         }
 
-        #a2,
-        #i2 {
+        :is(#a2, #i2) {
             grid-column: 2;
             grid-row: 1;
         }
 
-        #a3,
-        #i3 {
+        :is(#a3, #i3) {
             grid-column: 1;
             grid-row: 2;
         }
 
-        #a4,
-        #i4 {
+        :is(#a4, #i4) {
             grid-column: 2;
             grid-row: 2;
         }
