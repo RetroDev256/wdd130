@@ -11,11 +11,6 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --bg: #13181c;
-            --fg: whitesmoke;
-        }
-
         html,
         body {
             height: 100%;
@@ -23,8 +18,8 @@
         }
 
         body {
-            background: var(--bg);
-            padding: 64px;
+            background: #13181c;
+            padding: 5%;
             display: grid;
             grid-template-columns: 3fr 2fr;
             grid-template-rows: 3fr 2fr;
@@ -32,89 +27,87 @@
         }
 
         a {
-            position: relative;
-            overflow: hidden;
-
-            border-radius: 32px;
-            border: 4px dashed var(--fg);
-            color: var(--fg);
-            text-decoration: none;
-
-        }
-
-        a span {
             display: flex;
             justify-content: center;
             align-items: center;
-
-            font-family: monospace;
-            font-size: 48px;
-            font-weight: bold;
-
-            background: var(--bg);
-
             z-index: 1;
+
+            border-radius: 32px;
+            border: 4px dashed whitesmoke;
+            padding: 8px;
+
+            color: whitesmoke;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 32px;
         }
 
-        a iframe {
-            pointer-events: none;
-            filter: blur(24px);
-            
-            z-index: 0;
-        }
-
-        a * {
-            position: absolute;
-            top: 0;
-            left: 0;
+        iframe {
             width: 100%;
             height: 100%;
+            z-index: 0;
+
+            filter: blur(24px);
+            opacity: 0;
         }
 
-        #a1 {
+        #a1,
+        #i1 {
             grid-column: 1;
             grid-row: 1;
         }
 
-        #a2 {
+        #a2,
+        #i2 {
             grid-column: 2;
             grid-row: 1;
         }
 
-        #a3 {
+        #a3,
+        #i3 {
             grid-column: 1;
             grid-row: 2;
         }
 
-        #a4 {
+        #a4,
+        #i4 {
             grid-column: 2;
             grid-row: 2;
         }
 
-        a span:hover {
+        a:hover {
             mix-blend-mode: exclusion;
-            font-size: 64px;
+            font-size: 48px;
+        }
+
+        a:hover+iframe {
+            padding: 64px;
+            opacity: 1;
         }
     </style>
 </head>
 
+<!--
+CSS Combinators Cheat Sheet:
+    1. Descendant: "A B" – selects any B inside A (any depth).
+    2. Child: "A > B" – selects B directly inside A.
+    3. Adjacent Sibling: "A + B" – selects the first B immediately after A.
+    4. General Sibling: "A ~ B" – selects all B elements after A (same parent).
+    5. Grouping: "A, B" – selects all elements matching A or B.
+-->
+
 <body>
-    <a id="a1" href="flags.html">
-        <span> Flags </span>
-        <iframe id="i1" src="flags.html"></iframe>
-    </a>
-    <a id="a2" href="nelson.html">
-        <span> Nelson </span>
-        <iframe id="i2" src="nelson.html"></iframe>
-    </a>
-    <a id="a3" href="valentines.html">
-        <span> Valentines </span>
-        <iframe id="i3" src="valentines.html"></iframe>
-    </a>
-    <a id="a4" href="spotlight.html">
-        <span> Spotlight </span>
-        <iframe id="i4" src="spotlight.html"></iframe>
-    </a>
+    <a id="a1" href="flags.html"> Flags </a>
+    <iframe id="i1" src="flags.html"></iframe>
+
+    <a id="a2" href="nelson.html"> Nelson </a>
+    <iframe id="i2" src="nelson.html"></iframe>
+
+    <a id="a3" href="valentines.html"> Valentines </a>
+    <iframe id="i3" src="valentines.html"></iframe>
+
+    <a id="a4" href="spotlight.html"> Spotlight </a>
+    <iframe id="i4" src="spotlight.html"></iframe>
 </body>
 
 </html>
