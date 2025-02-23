@@ -253,9 +253,9 @@ footer {
         flex-direction: column;
     }
 
-    nav a {
-        display: block;
-        padding: 15px;
+    footer>a, nav>a {
+        width: 100%;
+        height: 25%;
     }
 
     :is(#hero, #hero-msg) {
@@ -264,10 +264,6 @@ footer {
 
     #hero-msg h4 {
         display: none;
-    }
-
-    #hero-msg h1 {
-        color: #6f7364;
     }
 
     .home-title {
