@@ -20,7 +20,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <h1>Title here</h1>
         <div class="grid">
@@ -38,10 +38,66 @@
             </p>
         </div>
     </main>
-    
+
     <footer>
         &copy; Eric Petersen 2025
+
+        <h3>Contact Me:</h3>
+        <form>
+            <div id="name">
+                <label for="name">Full Name:</label>
+                <input type="text" name="name">
+            </div>
+
+            <div id="ssn">
+                <label for="ssn">Social Security Number:</label>
+                <input type="text" name="ssn">
+            </div>
+
+            <div id="gender">
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender">
+                <label for="gender">Male</label>
+                <input type="radio" name="gender">
+                <label for="gender">Female</label>
+            </div>
+
+            <div id="muppets">
+                <h3>Favorite Muppets</h3>
+                <input type="checkbox" name="kermit">
+                <label for="kermit">Kermit</label>
+                <input type="checkbox" name="fozzie">
+                <label for="fozzie">Fozzie</label>
+                <input type="checkbox" name="animal">
+                <label for="animal">Animal</label>
+            </div>
+
+            <div id="tellme">
+                <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="tp"
+                    name="tellme">o toki tawa ni</textarea>
+            </div>
+
+            <div id="cars">
+                <label for="cars">Choose a car:</label>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="gmc">GMC</option>
+                </select>
+            </div>
+
+            <div id="number">
+                <label for="number">Enter your phone number: </label>
+                <input type="range" name="points" min="0" max="999999999999999">
+            </div>
+            
+            <div id="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </footer>
 
 </body>
+
 </html>
