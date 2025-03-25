@@ -1,6 +1,7 @@
 * {
-    /* We will pad things to the exact dimentions we need them */
+    padding: 0;
     margin: 0;
+    color: white;
 }
 
 /* Add the class for rendering the toki pona font */
@@ -15,68 +16,126 @@
     font-family: "linjapona";
 }
 
-body {
-    background-color: lightcyan;
-    font-size: 24px;
-    margin: 0 auto;
-    width: 75%;
+#logo {
+    border: 4px solid black;
+    border-radius: 25%;
 }
 
-/*
-    The border-radius property controls rounding of an element's corners.
-    "flex" is shorthand for "...-grow ...-shrink ...-basis"
-    "border" is shorthand for "...-width ...-style ...-color"
-    "margin" is shorthand for "...-top ...-right ...-bottom ...-left"
-    "padding" is shorthand for "...-top ...-right ...-bottom ...-left"
-*/
+:is(nav, footer) {
+    background-color: #121214;
+    border: 8px solid black;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+:is(.eng_text, .tp_text) {
+    background-color: #242429;
+    border: 4px dashed black;
+    padding: 16px;
+}
+
+nav {
+    border-top: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    height: 96px;
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    font-family: monospace;
+    border-radius: 16px;
+    padding-inline: 32px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #1a1a1e;
+    font-size: 24px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    border-bottom: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#title {
+    margin: 32px;
+    text-align: center;
+    font-size: 128px;
+
+    text-shadow:
+        2px 2px 4px black,
+        -2px -2px 4px black,
+        2px -2px 4px black,
+        -2px 2px 4px black,
+        2px 2px 4px black,
+        -2px -2px 4px black,
+        2px -2px 4px black,
+        -2px 2px 4px black,
+        2px 2px 4px black,
+        -2px -2px 4px black,
+        2px -2px 4px black,
+        -2px 2px 4px black,
+        2px 2px 4px black,
+        -2px -2px 4px black,
+        2px -2px 4px black,
+        -2px 2px 4px black;
+}
 
 /* Grid layout of webpage */
 .grid {
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 1fr 1fr
 }
 
 .eng_text {
-    grid-column: 1 / 3;
-    grid-row: 1;
+    grid-area: 1 / 1 / 2 / 3;
 }
 
 .steve_one {
-    grid-column: 3;
-    grid-row: 1;
+    grid-area: 1 / 3 / 2 / 4;
 }
 
 .steve_two {
-    grid-column: 1;
-    grid-row: 2;
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 .tp_text {
-    grid-column: 2 / 4;
-    grid-row: 2;
-}
-
-/* Borders of elements */
-:is(.eng_text, .tp_text) {
-    border: 4px solid black;
-    padding: 16px;
+    grid-area: 2 / 2 / 3 / 4;
 }
 
 /* Center steves */
 :is(.steve_one, .steve_two) {
     margin: 0 auto;
-}
-
-/* Make links look better */
-nav a {
-    color: blue;
-    text-decoration: none;
-}
-
-/* Grid layout of form */
-form {
-    display: grid;
-    grid-template-columns: 2;
 }
