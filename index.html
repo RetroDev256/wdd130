@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD130 | Home</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -18,20 +18,52 @@
 
     <main>
         <h1 class="tp" id="title">o kama pona lon ni</h1>
-        <div class="grid">
-            <p class="eng_text">
-                &emsp; Lorem ipsum odor amet, consectetuer adipiscing elit. Varius curabitur penatibus
-                fringilla maximus nam. Placerat lacinia hac fames turpis dictum. Penatibus risus
-                sociosqu integer facilisi venenatis sit, eget pharetra neque. Nibh vivamus lectus,
-                nibh aenean ultrices per odio. Pulvinar aliquet mauris suspendisse porta dictumst
-                parturient sed natoque.
-            </p>
-            <img class="steve_one" src="images/steve.webp" alt="I am Steve">
-            <img class="steve_two" src="images/steve.webp" alt="I am Steve">
-            <p class="tp_text tp">
-                mi toki e toki-pona
-            </p>
+
+        <div id="grid">
+            <div id="eng_text">
+                <p>
+                    Welcome to my landing page! I am Eric Petersen - a developer proficient in Zig, Rust, C, C++, x86
+                    assembly language, HTML, Python, CSS, and of course, Brainf***. I use OpenZFS and Gentoo linux on my
+                    Legion 5 Laptop. I enjoy learning about cryptography, information theory, mathematics, random
+                    numbers, program optimization, and compression algorithms. I speak and write in the toki pona
+                    language. I am a member of the Church of Jesus Christ of latter-day saints.
+                </p>
+            </div>
+            <img id="image_one" src="images/zero.svg" alt="Ziglang Zero">
+            <img id="image_two" src="images/steve.webp" alt="I am Steve">
+            <div id="tp_text">
+                <p class="tp">
+                    pona tawa sina a
+                    <br>
+                    mi jan [_wawa _esun _kipisi _open _lili _oko]
+                    <br>
+                    mi sona mute e nasin pi ilo nanpa e nasin nanpa
+                    <br>
+                    mi kepeken e lawa pi pona mute lon ilo nanpa mi
+                    <br>
+                    mi musi e musi [_ma _awen _nanpa _kijetesantakalu _alasa]
+                    <br>
+                    mi wile e meli olin
+                </p>
+            </div>
         </div>
+
+        <div id="slider_container">
+            <h3> Enter your phone number: </h3>
+            <p id="displayed_number"> </p>
+            <input type="range" min="0" max="9999999999" class="slider" id="phone_number">
+
+            <script>
+                var slider = document.getElementById("phone_number");
+                var output = document.getElementById("displayed_number");
+                output.innerHTML = slider.value;
+
+                slider.oninput = function () {
+                    output.innerHTML = this.value;
+                }
+            </script>
+        </div>
+
     </main>
 
     <footer>
